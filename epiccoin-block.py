@@ -32,3 +32,9 @@ self.current_transaction.append({
   'amount': amount,
   })
 return self.last_block['index'] + 1
+#implement proof of work algorithm
+def proof_of_work(self, last_proof):
+   proof = 0
+        while self.valid_proof(last_proof, proof) is False:
+            proof += 1
+        return proof
